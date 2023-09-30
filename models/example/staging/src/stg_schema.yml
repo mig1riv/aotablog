@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: jaffle_shop_customers
+    description: "dbt faux customer data. For sandboxing and development."
+    columns:
+      - name: id
+        description: "Primary key for each individual customer."
+    
+      - name: first_name
+        description: "First name for the customer"
+
+      - name: last_name
+        description: "Last name for the customer"
+
+  - name: jaffle_shop_orders
+    description: " dbt faux order data. For sandboxing and development."
+    columns:
+      - name: id
+        description: "Primary key for each individual order."
+
+      - name: user_id
+        description: "The user_id assigned to the customer. Can also be seen as the foreign key belonging to the custmers table."
+
+      - name: order_date
+        description: "The date that the faux order was tendered."
+
+      - name: status
+        description: "The status of the order."
+
+      - name: _etl_loaded_at
+        description: "The loaded at timestamp."
