@@ -163,4 +163,29 @@ cython_debug/
 target/
 dbt_packages/
 logs/
-# end dbt Cloud content
+
+__pycache__
+.pyc
+.env
+.DS_Store
+db.sqlite3
+staticfiles/
+.profiles.yml
+
+# dbt specific
+/target/
+/dbt_modules/
+/dbt_modules.yml
+/catalog.json
+/run_results.json
+/*.log
+
+# Ignore compiled dbt models
+/dbt_modules/**/*.yml
+/dbt_modules/**/*.sql
+/dbt_modules/**/*.sql.md
+/dbt_modules/**/*.sql.jinja
+
+# Ignore dbt internal files
+/dbt_modules/**/*.dbts
+/dbt_modules/**/*.dbts.lock
