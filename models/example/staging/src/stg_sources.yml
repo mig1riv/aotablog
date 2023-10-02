@@ -15,4 +15,3 @@ sources:
     description: This source is the development layer for all future models related to stripe.
     tables:
       - name: payment
-

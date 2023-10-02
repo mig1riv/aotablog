@@ -11,3 +11,4 @@ select
     created             as created_dt,
     _batched_at         as etl_batched_dttm
 from {{ source('stripe', 'payment') }}
+
