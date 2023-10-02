@@ -170,7 +170,7 @@ __pycache__
 .DS_Store
 db.sqlite3
 staticfiles/
-.profiles.yml
+profiles.yml
 
 # dbt specific
 /target/
