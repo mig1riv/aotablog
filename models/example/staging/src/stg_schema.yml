@@ -14,7 +14,7 @@ models:
         description: "Last name for the customer"
 
   - name: jaffle_shop_orders
-    description: " dbt faux order data. For sandboxing and development."
+    description: "dbt faux order data. For sandboxing and development."
     columns:
       - name: id
         description: "Primary key for each individual order."
@@ -30,3 +30,28 @@ models:
 
       - name: _etl_loaded_at
         description: "The loaded at timestamp."
+
+  - name: stripe_payments
+    description: "dbt faux payments activity data. For sandboxing and development."
+    columns:
+      - name: id
+        description: "Primary key for payments activity."
+
+      - name: orderid
+        description: "Order id related to the payment record. Foreign key related to jaffle_shop.orders."
+
+      - name: paymentmethod
+        description: "The payment method that was used to process the transaction."
+
+      - name: status
+        description: "The status for the associated payment."
+
+      - name: amount
+        description: "The amount of money spent on the payment record."
+
+      - name: created
+        description: "The date the payment occurred."
+
+      - name: _batched_at
+        description: "The etl load dttm."
+        
